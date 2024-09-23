@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recorridos - Panel de Control</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Clientes</a>
+                    <div class="dropdown-content">
+                        <a href="registro_cliente.html">Registro de Cliente</a>
+                        <a href="consulta_clientes.html">Consulta de Clientes</a>
+                    </div>
+                </li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="recorridos.html">Recorridos de Reparto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="recorrido">
+            <h2>Recorrido de Reparto</h2>
+            <div id="map" style="height: 500px; width: 100%;"></div>
+            <div id="ruta"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sodería</p>
+    </footer>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Script personalizado -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

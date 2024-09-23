@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cliente - Panel de Control</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Clientes</a>
+                    <div class="dropdown-content">
+                        <a href="registro_cliente.html">Registro de Cliente</a>
+                        <a href="consulta_clientes.html">Consulta de Clientes</a>
+                    </div>
+                </li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="recorridos.html">Recorridos de Reparto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="nuevoCliente">
+            <h2>Registrar Nuevo Cliente</h2>
+            <form id="formNuevoCliente">
+                <label for="nombreApellido">Nombre y Apellido*</label>
+                <input type="text" id="nombreApellido" name="nombreApellido" required>
+
+                <label for="documento">DNI*</label>
+                <input type="text" id="documento" name="documento" required>
+
+                <label for="direccion">Calle y Numero*</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                <label for="localidad">Localidad*</label>
+                <input type="text" id="localidad" name="localidad">
+
+                <label for="telefono">Número de Teléfono*</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+
+
+                <button type="submit">Guardar</button>
+                <button type="reset">Cancelar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sodería</p>
+    </footer>
+    <script src="../js/script.js"></script> 
+    <script src="../js/registrocliente.js"></script> 
+</body>
+</html>

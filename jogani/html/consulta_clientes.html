@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Clientes - Panel de Control</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Clientes</a>
+                    <div class="dropdown-content">
+                        <a href="registro_cliente.html">Registro de Cliente</a>
+                        <a href="consulta_clientes.html">Consulta de Clientes</a>
+                    </div>
+                </li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="recorridos.html">Recorridos de Reparto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="consultarClientes">
+            <h2>Consultar Clientes</h2>
+            <form id="formBuscarCliente">
+                <label for="buscarCliente">Buscar Cliente:</label>
+                <input type="text" id="buscarCliente" name="buscarCliente" placeholder="Nombre, dirección, teléfono o email">
+                <button type="button" onclick="buscarCliente()">Buscar</button>
+            </form>
+            <table id="tablaClientes">
+                <thead>
+                    <tr>
+                        <th>Nombre y Apellido</th>
+                        <th>DNI</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th>Localidad</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button onclick="modificarCliente(this)">Modificar</button>
+                            <button onclick="eliminarCliente(this)">Eliminar</button>
+                        </td>
+                    </tr>
+                    <!-- Más filas aquí -->
+                </tbody>
+                
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sodería</p>
+    </footer>
+    <script src="../js/script.js"></script> 
+    <script src="../js/consultacliente.js"></script> 
+</body>
+</html>

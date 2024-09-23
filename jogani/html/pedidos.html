@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - Panel de Control</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Clientes</a>
+                    <div class="dropdown-content">
+                        <a href="registro_cliente.html">Registro de Cliente</a>
+                        <a href="consulta_clientes.html">Consulta de Clientes</a>
+                    </div>
+                </li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="recorridos.html">Recorridos de Reparto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="pedidos">
+            <h2>Registrar Pedido</h2>
+            <form id="formNuevoPedido">
+                <label for="buscarCliente">Buscar Cliente:</label>
+                <input type="text" id="buscarCliente" name="buscarCliente" placeholder="Nombre, dirección, teléfono o email">
+                <button type="button" onclick="buscarCliente()">Buscar</button>
+                    <!-- Las opciones de clientes se cargarán dinámicamente -->
+                </select>
+
+                <label for="producto">Producto:</label>
+                <input type="text" id="producto" name="producto" required>
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" step="0.01" required>
+
+                <label for="fecha">Selecciona una fecha:</label>
+                <input type="date" id="fecha" name="fecha">
+
+                <button type="button" onclick="agregarProducto()">Agregar Producto</button>
+            </form>
+
+            <h2>Productos en el Pedido</h2>
+            <table id="tablaProductos">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se mostrarán los productos agregados -->
+                </tbody>
+            </table>
+
+            <button type="button" onclick="guardarPedido()">Guardar Pedido</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sodería</p>
+    </footer>
+    <script src="../js/script.js"></script> 
+</body>
+</html>
